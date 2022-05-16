@@ -35,3 +35,5 @@ jobs:
         run: |
           echo "User input number : ${{ github.event.inputs.firstNumber }}"
           echo "User input number : ${{ github.event.inputs.secondNumber }}"
+          sum = ${{ github.event.inputs.firstNumber }} + ${{ github.event.inputs.secondNumber }}
+          echo "$sum"
