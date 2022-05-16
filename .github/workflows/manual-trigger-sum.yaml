@@ -11,6 +11,10 @@ on:
         description: 'Enter a first number'     
         required: true
         default: '5'
+      secondNumber:
+        description: 'Enter the 2nd number'
+        required: true
+        default: ''
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -26,3 +30,4 @@ jobs:
       - name: print the user input
         run: |
           echo "User input number : ${{ github.event.inputs.firstNumber }}"
+          echo "User input number : ${{ github.event.inputs.secondNumber }}"
